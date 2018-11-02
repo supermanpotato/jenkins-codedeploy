@@ -53,7 +53,7 @@ Parameters:
     Description: The VPC Id where the EC2 instances will be launched.
     Type: 'AWS::EC2::VPC::Id'
     ConstraintDescription: must be the name of an existing VPC.
-    Default: '172.31.0.0/16'
+    Default: 'vpc-96b97eec'
     
   YourIPRange:
     Description: >-
@@ -70,14 +70,14 @@ Parameters:
       The first public subnet where the Jenkins EC2 instance, ELB and CodeDeploy
       Web Servers will be launched
     Type: 'AWS::EC2::Subnet::Id'
-    Default: '172.31.0.0/20'
+    Default: 'subnet-5f59ee38'
     ConstraintDescription: Must be a valid Public VPC Subnet.
   PublicSubnet2:
     Description: >-
       The second public subnet where the ELB and CodeDeploy Web Servers will be
       launched
     Type: 'AWS::EC2::Subnet::Id'
-    Default: '172.31.16.0/20'
+    Default: 'subnet-5a95e055'
     ConstraintDescription: Must be a valid Public VPC Subnet.
 Mappings:
   AWSInstanceType2Arch:
