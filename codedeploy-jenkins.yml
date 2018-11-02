@@ -211,7 +211,7 @@ Resources:
 
       Tags:
         - Key: Name
-          Value: Jenkins Server
+          Value: !Ref 'AWS::StackName' - Jenkins Server
   JenkinsSecurityGroup:
     Type: 'AWS::EC2::SecurityGroup'
     Properties:
@@ -429,7 +429,7 @@ Resources:
       HealthCheckGracePeriod: 600
       Tags:
         - Key: Name
-          Value: CodeDeployDemo
+          Value: !Ref 'AWS::StackName' - CodeDeployDemo
           PropagateAtLaunch: 'true'
     CreationPolicy:
       ResourceSignal:
