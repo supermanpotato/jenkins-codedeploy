@@ -201,6 +201,8 @@ Resources:
             - |
               yum install -y jenkins java-1.8.0-openjdk 
             - |
+              sed -i 's/JENKINS_PORT="8080"/JENKINS_PORT="80"/g'
+            - |
               systemctl start jenkins
             - |
               systemctl stop firewalld
